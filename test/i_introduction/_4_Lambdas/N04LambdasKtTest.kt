@@ -14,4 +14,14 @@ class N04LambdasKtTest {
     fun notContains() {
         assertFalse(task4(listOf(1, 3, 5)))
     }
+
+    @Test
+    fun notLambda() {
+        val res = fun3(2, { a:Int -> a})
+        assertTrue(res==2)
+    }
+
+    val fun3: (num: Int,fn:(Int)->Int)->Int =
+            { value, func -> func(value) }
+
 }

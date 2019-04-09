@@ -25,5 +25,7 @@ fun todoTask0(): Nothing = TODO(
 )
 
 fun task0(): String {
-    return todoTask0()
+    //https://kotlin.es/2015/11/kotlin-koans-repositorio-de-ejercicios-oficiales/
+    //https://github.com/Kotlin/kotlin-koans
+    return "OK"
 }

@@ -16,8 +16,20 @@ fun todoTask10(): Nothing = TODO(
     documentation = doc10()
 )
 
+private fun todoTask10ObjectExp() = object  {
+    fun shorted (array: ArrayList<Int>) : ArrayList<Int> {
+        Arrays.sort(array.toArray(), Collections.reverseOrder())
+        println(array.toString())
+        return array
+    }
+}
+
+
+
 fun task10(): List<Int> {
     val arrayList = arrayListOf(1, 5, 2)
-    Collections.sort(arrayList, todoTask10())
+    Collections.sort(arrayList, object : Comparator<Int> {
+        override fun compare(x: Int, y: Int) = y - x
+    })
     return arrayList
 }
